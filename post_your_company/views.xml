@@ -1,0 +1,50 @@
+<odoo>
+
+    <record id="view_tree_company" model="ir.ui.view">
+        <field name="name">view.tree.company</field>
+        <field name="model">company</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="name2"/>
+                <field name="name3"/>
+                <field name="name4"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_form_company" model="ir.ui.view">
+
+        <field name="name">view.form.company</field>
+        <field name="model">company</field>
+        <field name="arch" type="xml">
+
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="name2"/>
+                        <field name="name3"/>
+                        <field name="name4"/>
+                        <field name="status"/>
+                    </group>
+                </sheet>
+            </form>
+
+
+        </field>
+
+
+    </record>
+
+    <record id="action_view_company" model="ir.actions.act_window">
+        <field name="name">Lista de Empresas</field>
+        <field name="res_model">company</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    
+
+    <menuitem id="menu_company" parent="" action="post_your_company.action_view_company"/>
+</odoo>
